@@ -1,0 +1,53 @@
+<html>
+<center>
+<head>
+    <h1>Guest list</h1>
+</head>   
+<body>
+    <section>
+  <span>
+        <input type="text" id="add name" >
+    <button onclick="Add()"  id="button add name">Add</button>
+   </span> 
+<h2 id="geust_names"></h2>
+</section>
+<hr>
+<section>
+ <center>
+    <div>
+       <h3>Guest list</h3>
+        <button onclick="Show()"  id="show_button">Show</button>
+<h5 id="show_tag"></h5>   
+    </div>
+</center>
+</section>
+<hr>
+<section>
+    <center>
+       <div>
+         <button onclick="sorted()"  id="sort_button">Show</button>
+       <h6 id=sort_tag></h6>
+        </div>
+   </center>
+   </section>
+</body>
+</center>
+<script>
+    var names=[];
+    function Add(){
+var name =document.getElementById("add name").value;
+names.push(name);
+document.getElementById("geust_names").innerHTML = names;
+console.log("geust_names");
+    }
+    function Show();{
+        document.getElementById("show_tag").innerHTML = names;
+console.log("show_tag");
+    }
+    function sorted(){
+names.sort();
+document.getElementById("sort_tag").innerHTML = names;
+console.log("sort_tag");
+    }
+</script>
+</html>
